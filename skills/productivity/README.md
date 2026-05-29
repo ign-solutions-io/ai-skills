@@ -2,6 +2,7 @@
 
 General workflow tools, not code-specific.
 
+- **[andrey-k](./andrey-k/SKILL.md)** — Four-principle coding/decision filter (think before coding, simplicity first, surgical changes, goal-driven execution). Re-examine a plan, change, or issue against the principles. Curated from Karpathy's guidelines, not original.
 - **[caveman](./caveman/SKILL.md)** — Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler while keeping full technical accuracy.
 - **[grill-me](./grill-me/SKILL.md)** — Get relentlessly interviewed about a plan or design until every branch of the decision tree is resolved.
 - **[handoff](./handoff/SKILL.md)** — Compact the current conversation into a handoff document so another agent can continue the work.
