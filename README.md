@@ -22,6 +22,12 @@ If you want to keep up with changes to these skills, and any new ones I create, 
 
 [Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter)
 
+## About This Fork
+
+This repository is a fork of [`mattpocock/skills`](https://github.com/mattpocock/skills) ("Skills For Real Engineers" by Matt Pocock), maintained at [`ign-solutions-io/ai-skills`](https://github.com/ign-solutions-io/ai-skills).
+
+It tracks the upstream skills, with custom development by **Zaprin Ignatiev** (aka `ziroock`). The main original contribution in this fork at this time is the [`pressure-test`](./skills/productivity/pressure-test/SKILL.md) skill. All credit for the upstream skills remains with Matt Pocock — see [`LICENSE`](./LICENSE).
+
 ## Quickstart (30-second setup)
 
 1. Run the skills.sh installer:
@@ -164,6 +170,7 @@ General workflow tools, not code-specific.
 - **[caveman](./skills/productivity/caveman/SKILL.md)** — Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler while keeping full technical accuracy.
 - **[grill-me](./skills/productivity/grill-me/SKILL.md)** — Get relentlessly interviewed about a plan or design until every branch of the decision tree is resolved.
 - **[handoff](./skills/productivity/handoff/SKILL.md)** — Compact the current conversation into a handoff document so another agent can continue the work.
+- **[pressure-test](./skills/productivity/pressure-test/SKILL.md)** — Iterate critical reviews on a plan + chat folder until split-ready, then extract a clean PRD. Tool-agnostic (Claude + Codex rotate as reviewers).
 - **[write-a-skill](./skills/productivity/write-a-skill/SKILL.md)** — Create new skills with proper structure, progressive disclosure, and bundled resources.
 
 ### Misc
