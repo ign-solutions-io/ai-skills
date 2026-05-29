@@ -15,6 +15,7 @@
     "./skills/productivity/caveman",
     "./skills/productivity/grill-me",
     "./skills/productivity/handoff",
+    "./skills/productivity/pass",
     "./skills/productivity/pressure-test",
     "./skills/productivity/write-a-skill"
   ]
