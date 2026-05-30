@@ -1,0 +1,12 @@
+{
+  "name": "ai-skills",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Agent skills (slash commands and behaviors) for Claude Code and Cursor.",
+  "scripts": {
+    "setup": "bun run setup:cursor && bun run setup:claude",
+    "setup:cursor": "bash scripts/link-skills.sh cursor",
+    "setup:claude": "bash scripts/link-skills.sh claude",
+    "list": "bash scripts/list-skills.sh"
+  }
+}

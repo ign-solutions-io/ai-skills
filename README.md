@@ -10,7 +10,7 @@
 
 # Skills For Real Engineers
 
-[![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills)
+[![skills.sh](https://skills.sh/b/ign-solutions-io/ai-skills)](https://skills.sh/ign-solutions-io/ai-skills)
 
 My agent skills that I use every day to do real engineering - not vibe coding.
 
@@ -30,20 +30,24 @@ It tracks the upstream skills, with custom development by **Zaprin Ignatiev** (a
 
 ## Quickstart (30-second setup)
 
-1. Run the skills.sh installer:
+1. Install the skills with the [`skills`](https://skills.sh) CLI (bun). They install straight into your agent — symlinked, so updates flow through:
 
 ```bash
-npx skills@latest add mattpocock/skills
+# Cursor — installs into ~/.cursor/skills
+bunx skills add ign-solutions-io/ai-skills -a cursor -g
+
+# Claude Code — installs into ~/.claude/skills
+bunx skills add ign-solutions-io/ai-skills -a claude-code -g
 ```
 
-2. Pick the skills you want, and which coding agents you want to install them on. **Make sure you select `/setup-ai-skills`**.
+Drop `-g` to install into the current project (`.agents/skills/`) instead of globally. Omit `-a <agent>` to be prompted for which skills and agents to install. (Prefer npm? Swap `bunx` for `npx`.)
 
-3. Run `/setup-ai-skills` in your agent. It will:
-   - Ask you which issue tracker you want to use (GitHub, Linear, or local files)
-   - Ask you what labels you apply to ticks when you triage them (`/triage` uses labels)
-   - Ask you where you want to save any docs we create
+2. **Make sure `/setup-ai-skills` is included**, then run it in your agent. It will:
+   - Ask which issue tracker you use (GitHub, GitLab, or local files)
+   - Ask which labels you apply when you triage (`/triage` uses labels)
+   - Ask where to save any docs it creates
 
-4. Bam - you're ready to go.
+3. Bam - you're ready to go. (If Cursor's `@`/slash autocomplete doesn't show the new skills, start a new session.)
 
 ## Supported agents
 
@@ -51,14 +55,18 @@ These skills target both **Claude Code** and **Cursor**. The `SKILL.md` format i
 
 ### Local install (symlinks)
 
-To develop against the skills (edit in this repo, use them live), symlink the live buckets into an agent's personal skills directory:
+To develop against the skills (edit in this clone, use them live), symlink the live buckets into an agent's personal skills directory:
 
 ```bash
-./scripts/link-skills.sh claude   # links into ~/.claude/skills
-./scripts/link-skills.sh cursor   # links into ~/.cursor/skills
+git clone https://github.com/ign-solutions-io/ai-skills.git
+cd ai-skills
+
+bun run setup:cursor   # links into ~/.cursor/skills
+bun run setup:claude   # links into ~/.claude/skills
+bun run setup          # both
 ```
 
-Run it for whichever agents you use (you can run both). Editing a skill here updates the live skill instantly, and `git pull` picks up new skills — just re-run the script to link any that were added. It skips the `deprecated/` and `in-progress/` buckets.
+(These wrap `scripts/link-skills.sh <agent>` if you'd rather call it directly.) Run it for whichever agents you use. Editing a skill here updates the live skill instantly, and `git pull` picks up new skills — just re-run to link any that were added. It skips the `deprecated/` and `in-progress/` buckets.
 
 ### Agent-specific skills
 
