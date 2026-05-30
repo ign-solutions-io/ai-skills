@@ -1,7 +1,7 @@
 MIT License
 
 Copyright (c) 2026 Matt Pocock (original "Skills For Real Engineers" repository)
-Copyright (c) 2026 Zaprin Ignatiev (ziroock) (fork modifications and original skills, including "pressure-test")
+Copyright (c) 2026 Zaprin Ignatiev (ziroock) (fork modifications and additions, including the original "pressure-test" skill)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,3 +20,39 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+================================================================================
+ATTRIBUTION & PROVENANCE
+================================================================================
+
+This repository (ign-solutions-io/ai-skills) is a fork (clone) of
+mattpocock/skills — "Skills For Real Engineers" by Matt Pocock
+(https://github.com/mattpocock/skills). The substantial majority of the skills
+here are Matt Pocock's original work, carried over from that upstream repository
+and used under the MIT License above. All credit for them remains with him.
+
+To remove any possible confusion about who authored what, the provenance of
+every skill is recorded below. Any skill NOT listed under "Additions made in
+this fork" originates from Matt Pocock's upstream repository.
+
+Matt Pocock's original skills (from the upstream repository)
+------------------------------------------------------------
+engineering/  diagnose, grill-with-docs, improve-codebase-architecture,
+              prototype, setup-ai-skills (named "setup-matt-pocock-skills"
+              upstream; renamed in this fork), tdd, to-issues, to-prd, triage,
+              zoom-out
+productivity/ caveman, grill-me, handoff, write-a-skill
+misc/         git-guardrails-claude-code, migrate-to-shoehorn,
+              scaffold-exercises, setup-pre-commit
+personal/     edit-article, obsidian-vault
+in-progress/  review, teach, writing-beats, writing-fragments, writing-shape
+deprecated/   design-an-interface, qa, request-refactor-plan,
+              ubiquitous-language
+
+Additions made in this fork (NOT from the upstream repository)
+--------------------------------------------------------------
+productivity/pressure-test  Original work by Zaprin Ignatiev (ziroock).
+productivity/pass           Added in this fork by Zaprin Ignatiev (ziroock).
+productivity/andrey-k       Curated by Zaprin Ignatiev (ziroock) from Andrej
+                            Karpathy's publicly shared guidelines on LLM coding
+                            pitfalls; not an original work of either author.
