@@ -12,6 +12,16 @@
 
 [![skills.sh](https://skills.sh/b/ign-solutions-io/ai-skills)](https://skills.sh/ign-solutions-io/ai-skills)
 
+> [!NOTE]
+> **Works with both [Cursor](https://cursor.com) and [Claude Code](https://www.anthropic.com/claude-code).** Install everything for your agent in one command:
+>
+> ```bash
+> bunx skills add ign-solutions-io/ai-skills -a cursor -g       # Cursor
+> bunx skills add ign-solutions-io/ai-skills -a claude-code -g  # Claude Code
+> ```
+>
+> Full options in the [Quickstart](#quickstart-30-second-setup) below.
+
 My agent skills that I use every day to do real engineering - not vibe coding.
 
 Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve.
