@@ -1,6 +1,4 @@
-# Skills For Real Engineers
-
-[![skills.sh](https://skills.sh/b/ign-solutions-io/ai-skills)](https://skills.sh/ign-solutions-io/ai-skills)
+# Skills For Agentic Orchestration
 
 > [!NOTE]
 > **Works with both [Cursor](https://cursor.com) and [Claude Code](https://www.anthropic.com/claude-code).** Install everything for your agent in one command:
