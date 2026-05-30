@@ -45,6 +45,31 @@ npx skills@latest add mattpocock/skills
 
 4. Bam - you're ready to go.
 
+## Supported agents
+
+These skills target both **Claude Code** and **Cursor**. The `SKILL.md` format is shared by both, so almost every skill is cross-agent — the same skill file works in either tool.
+
+### Local install (symlinks)
+
+To develop against the skills (edit in this repo, use them live), symlink the live buckets into an agent's personal skills directory:
+
+```bash
+./scripts/link-skills.sh claude   # links into ~/.claude/skills
+./scripts/link-skills.sh cursor   # links into ~/.cursor/skills
+```
+
+Run it for whichever agents you use (you can run both). Editing a skill here updates the live skill instantly, and `git pull` picks up new skills — just re-run the script to link any that were added. It skips the `deprecated/` and `in-progress/` buckets.
+
+### Agent-specific skills
+
+A handful of skills only make sense on one agent (for example, [`git-guardrails-claude-code`](./skills/misc/git-guardrails-claude-code/SKILL.md) configures Claude Code hooks). Those declare an `agents:` field in their `SKILL.md` frontmatter:
+
+```yaml
+agents: [claude]
+```
+
+The linker skips a skill for any agent not listed. A skill with no `agents:` field is shared and links everywhere.
+
 ## Why These Skills Exist
 
 I built these skills as a way to fix common failure modes I see with Claude Code, Codex, and other coding agents.
@@ -179,7 +204,7 @@ General workflow tools, not code-specific.
 
 Tools I keep around but rarely use.
 
-- **[git-guardrails-claude-code](./skills/misc/git-guardrails-claude-code/SKILL.md)** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute.
+- **[git-guardrails-claude-code](./skills/misc/git-guardrails-claude-code/SKILL.md)** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute. _(Claude only.)_
 - **[migrate-to-shoehorn](./skills/misc/migrate-to-shoehorn/SKILL.md)** — Migrate test files from `as` type assertions to @total-typescript/shoehorn.
 - **[scaffold-exercises](./skills/misc/scaffold-exercises/SKILL.md)** — Create exercise directory structures with sections, problems, solutions, and explainers.
 - **[setup-pre-commit](./skills/misc/setup-pre-commit/SKILL.md)** — Set up Husky pre-commit hooks with lint-staged, Prettier, type checking, and tests.
