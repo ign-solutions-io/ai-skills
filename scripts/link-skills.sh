@@ -4,9 +4,10 @@ set -euo pipefail
 # Links all live skills in the repository into a coding agent's personal
 # skills directory, so they can be used locally.
 #
-# Usage: scripts/link-skills.sh [cursor|claude]
+# Usage: scripts/link-skills.sh [cursor|claude|codex]
 #   cursor -> ~/.cursor/skills
 #   claude -> ~/.claude/skills   (default)
+#   codex  -> ~/.codex/skills
 #
 # Skips the deprecated/ and in-progress/ buckets; only live skills are linked.
 #
@@ -25,8 +26,9 @@ agent="${1:-claude}"
 case "$agent" in
   cursor) DEST="$HOME/.cursor/skills" ;;
   claude) DEST="$HOME/.claude/skills" ;;
+  codex) DEST="$HOME/.codex/skills" ;;
   *)
-    echo "error: unknown agent '$agent' (expected 'cursor' or 'claude')" >&2
+    echo "error: unknown agent '$agent' (expected 'cursor', 'claude', or 'codex')" >&2
     exit 1
     ;;
 esac

@@ -4,9 +4,10 @@
   "private": true,
   "description": "Agent skills (slash commands and behaviors) for Claude Code and Cursor.",
   "scripts": {
-    "setup": "bun run setup:cursor && bun run setup:claude",
+    "setup": "bash scripts/link-skills.sh cursor && bash scripts/link-skills.sh claude && bash scripts/link-skills.sh codex",
     "setup:cursor": "bash scripts/link-skills.sh cursor",
     "setup:claude": "bash scripts/link-skills.sh claude",
+    "setup:codex": "bash scripts/link-skills.sh codex",
     "list": "bash scripts/list-skills.sh"
   }
 }
