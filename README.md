@@ -194,6 +194,7 @@ Skills I use daily for code work.
 - **[zoom-out](./skills/engineering/zoom-out/SKILL.md)** — Tell the agent to zoom out and give broader context or a higher-level perspective on an unfamiliar section of code.
 - **[prototype](./skills/engineering/prototype/SKILL.md)** — Build a throwaway prototype to flesh out a design — either a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route.
 - **[react-best-practices](./skills/engineering/react-best-practices/SKILL.md)** — Preferred patterns for writing React ("you might not need an effect"): derived state, data-fetching libraries, event handlers, key-based resets, and inline computation over `useEffect` synchronization.
+- **[plan-it](./skills/engineering/plan-it/SKILL.md)** — Turn a raw project idea into a build-ready "Plan v1 (hardened)" via a grill session: locked decisions with reasons, guards, parked ideas with reconsider-if triggers, and testable success conditions.
 
 ### Productivity
 
